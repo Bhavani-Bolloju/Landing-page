@@ -1,1 +1,43 @@
-/* font-family: 'DM Sans', sans-serif; */
+:root {
+  --font-family: "DM Sans", sans-serif;
+
+  --background-color: #2f1893;
+  --color-action--1: #e93a7d;
+  --color-action--2: #482be7;
+  --color-action--2: #1da1f2;
+  --color-action--4: #25dac5;
+
+  --color-white: #fff;
+  --color-text: #15143966;
+
+  --font-size-title: 5.8rem;
+  --font-size-subHeading: 4.2rem;
+  --font-size-para: 2.2rem;
+  --font-size-base: 1.8rem;
+
+  --font-weight-base: 500;
+  --font-weight-headings: 700;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: inherit;
+  font-size: 1.6rem;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+}
+
+/* form - 470x600
+  body - 1400x890
+*/
