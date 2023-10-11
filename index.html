@@ -16,22 +16,22 @@
     <header class="header">
       <div class="header__logo">startup 3</div>
       <nav class="header__nav-menu">
-        <ul class="header__menu-item">
-          <li class="header__nav--item">
+        <ul class="header__menu-list">
+          <li class="header__menu-item">
             <a href="#overview">overview</a>
           </li>
-          <li class="header__nav--item">
+          <li class="header__menu-item">
             <a href="#price">price</a>
           </li>
-          <li class="header__nav--item">
+          <li class="header__menu-item">
             <a href="#blog">blog</a>
           </li>
-          <li class="header__nav--item">
+          <li class="header__menu-item">
             <a href="#feedback">feedback</a>
           </li>
         </ul>
       </nav>
-      <button class="btn btn--round">purchase</button>
+      <button class="btn btn--primary">purchase</button>
     </header>
     <main>
       <section class="content-section">
@@ -42,11 +42,11 @@
             form a set of 25 usable pages you can use as is or you can add new
             blocks.
           </p>
-          <button class="btn btn--round">learn more</button>
+          <button class="btn btn--primary">learn more</button>
         </div>
         <div class="form">
           <form action="" class="form__signup">
-            <h3 class="form__tile">sign up form</h3>
+            <h3 class="form__tile">sign up now</h3>
             <input type="text" class="form__input" placeholder="your email" />
             <input
               type="text"
@@ -54,16 +54,20 @@
               placeholder="your password"
             />
             <div class="form__terms">
-              <input type="text" class="form__checkbox" />
-              <label for="" class="form__checkbox-tile"
+              <input type="checkbox" class="form__checkbox" id="terms" />
+
+              <div class="custom__checkbox"></div>
+              <label for="terms" class="form__checkbox-tile"
                 >I agree to the Terms of Service.</label
               >
             </div>
-            <button class="btn btn--form">sign in</button>
-            <p>or</p>
-            <button class="btn btn--form">login via twitter</button>
+            <button class="btn btn--signin">Sign In</button>
+            <p class="form__or">or</p>
+            <button class="btn btn--twitter">Login via Twitter</button>
 
-            <p>Do you have an account? <a href="#signIn">sign in</a></p>
+            <p class="form__redirect">
+              Do you have an Account? <a href="#signIn">sign in</a>
+            </p>
           </form>
         </div>
       </section>

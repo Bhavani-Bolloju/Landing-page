@@ -4,11 +4,14 @@
   --background-color: #2f1893;
   --color-action--1: #e93a7d;
   --color-action--2: #482be7;
-  --color-action--2: #1da1f2;
+  --color-action--3: #1da1f2;
   --color-action--4: #25dac5;
 
   --color-white: #fff;
   --color-text: #15143966;
+  --color-form: #1e0e62;
+
+  --color-border: #ebeaed;
 
   --font-size-title: 5.8rem;
   --font-size-subHeading: 4.2rem;
@@ -36,8 +39,224 @@ body {
   font-size: 1.6rem;
   font-family: var(--font-family);
   background-color: var(--background-color);
+  padding: 5rem 20rem;
+  color: var(--color-white);
+  font-size: var(--font-size-base);
 }
 
-/* form - 470x600
-  body - 1400x890
-*/
+.header {
+  display: flex;
+  text-transform: capitalize;
+  gap: 5rem;
+  align-items: center;
+  font-size: var(--font-size-base);
+  width: 90%;
+  margin: auto;
+  margin-bottom: 8rem;
+}
+.header__logo {
+  font-weight: var(--font-weight-headings);
+  font-size: var(--font-size-para);
+}
+.header__nav-menu {
+  margin-left: auto;
+}
+.header__menu-list {
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+  align-items: center;
+}
+.header__menu-item a {
+  text-decoration: none;
+  font-family: inherit;
+  color: inherit;
+  font-size: var(--font-size-base);
+  transform: color 0.3s;
+}
+
+.header__menu-item a:hover {
+  color: var(--color-action--1);
+}
+
+main {
+  width: 90%;
+  margin: auto;
+}
+
+.content-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content {
+  width: 38%;
+}
+
+.content--title {
+  font-weight: var(--font-weight-headings);
+  text-transform: capitalize;
+  font-size: var(--font-size-title);
+  margin-bottom: 2rem;
+  line-height: 7rem;
+  letter-spacing: -1px;
+}
+.content--text {
+  font-size: var(--font-size-para);
+  margin-bottom: 4rem;
+  line-height: 32px;
+}
+
+.form {
+  width: 48rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 4rem 8rem;
+}
+.form__signup {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-text);
+  font-size: 1.6rem;
+}
+.form__tile {
+  color: var(--color-form);
+  text-align: center;
+  text-transform: capitalize;
+  font-size: var(--font-size-subHeading);
+  margin-bottom: 3.5rem;
+}
+.form__input {
+  border-radius: 50rem;
+  padding: 1.5rem 2rem;
+  border: 1px solid var(--color-border);
+  margin-bottom: 2rem;
+  height: 5rem;
+  outline: none;
+}
+
+.form__input:focus-visible {
+  border: 1px solid var(--color-text);
+}
+
+.form__input::placeholder {
+  color: var(--color-text);
+  font-size: 1.6rem;
+  text-transform: capitalize;
+}
+
+.form__terms {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+.form__checkbox {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  z-index: 100;
+  opacity: 0;
+  border: none;
+}
+
+.form__checkbox:checked {
+  z-index: 200;
+}
+
+.custom__checkbox {
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 2px solid var(--color-text);
+  border-radius: 0.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom__checkbox::after {
+  content: "\2713";
+  color: var(--color-form);
+  font-weight: var(--font-weight-headings);
+  line-height: 6rem;
+  display: none;
+}
+
+.form__checkbox:checked + .custom__checkbox {
+  background-color: var(--color-action--4);
+  border-color: var(--color-action--4);
+}
+
+.form__checkbox:checked + .custom__checkbox::after {
+  display: block;
+}
+
+.custom__checkbox:hover,
+.form__checkbox:hover {
+  cursor: pointer;
+}
+.form__checkbox-title {
+  font-size: var(--font-size-base);
+}
+.form__or {
+  text-align: center;
+  margin: 2.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.form__or::after,
+.form__or::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 50%;
+  background-color: var(--color-border);
+  margin: auto;
+}
+
+.form__redirect {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.form__redirect a {
+  color: var(--color-action--4);
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.btn {
+  padding: 1rem 3rem;
+  border-radius: 50rem;
+  border: none;
+  outline: none;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-base);
+  color: var(--color-white);
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn--primary {
+  text-transform: capitalize;
+  background-color: var(--color-action--1);
+  height: 4rem;
+}
+
+.btn--signin {
+  background-color: var(--color-action--2);
+  height: 5rem;
+}
+.btn--twitter {
+  background-color: var(--color-action--3);
+  height: 5rem;
+}
