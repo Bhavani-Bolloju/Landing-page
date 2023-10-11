@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500;9..40,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/styles.css" />
     <title>Landing page</title>
   </head>
@@ -27,5 +33,40 @@
       </nav>
       <button class="btn btn--round">purchase</button>
     </header>
+    <main>
+      <section class="content-section">
+        <div class="content">
+          <h2 class="content--title">generate awesome web pages</h2>
+          <p class="content--text">
+            The most important part of the Startup is the samples. The samples
+            form a set of 25 usable pages you can use as is or you can add new
+            blocks.
+          </p>
+          <button class="btn btn--round">learn more</button>
+        </div>
+        <div class="form">
+          <form action="" class="form__signup">
+            <h3 class="form__tile">sign up form</h3>
+            <input type="text" class="form__input" placeholder="your email" />
+            <input
+              type="text"
+              class="form__input"
+              placeholder="your password"
+            />
+            <div class="form__terms">
+              <input type="text" class="form__checkbox" />
+              <label for="" class="form__checkbox-tile"
+                >I agree to the Terms of Service.</label
+              >
+            </div>
+            <button class="btn btn--form">sign in</button>
+            <p>or</p>
+            <button class="btn btn--form">login via twitter</button>
+
+            <p>Do you have an account? <a href="#signIn">sign in</a></p>
+          </form>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
