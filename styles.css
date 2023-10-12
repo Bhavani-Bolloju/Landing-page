@@ -39,7 +39,7 @@ body {
   font-size: 1.6rem;
   font-family: var(--font-family);
   background-color: var(--background-color);
-  padding: 5rem 20rem;
+  padding: 3rem 20rem;
   color: var(--color-white);
   font-size: var(--font-size-base);
 }
@@ -88,6 +88,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 3rem;
 }
 
 .content {
@@ -105,7 +106,7 @@ main {
 .content--text {
   font-size: var(--font-size-para);
   margin-bottom: 4rem;
-  line-height: 32px;
+  line-height: 3.2rem;
 }
 
 .form {
@@ -130,7 +131,7 @@ main {
 .form__input {
   border-radius: 50rem;
   padding: 1.5rem 2rem;
-  border: 1px solid var(--color-border);
+  border: 2px solid var(--color-border);
   margin-bottom: 2rem;
   height: 5rem;
   outline: none;
@@ -143,7 +144,7 @@ main {
 .form__input::placeholder {
   color: var(--color-text);
   font-size: 1.6rem;
-  text-transform: capitalize;
+  font-weight: var(--font-weight-headings);
 }
 
 .form__terms {
@@ -240,10 +241,12 @@ main {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-base);
   color: var(--color-white);
+  transition: transform 0.1s;
 }
 
 .btn:hover {
   cursor: pointer;
+  transform: translateY(-2px);
 }
 
 .btn--primary {
@@ -259,4 +262,31 @@ main {
 .btn--twitter {
   background-color: var(--color-action--3);
   height: 5rem;
+}
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 58%;
+  }
+
+  body {
+    padding: 3rem 10rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 55%;
+  }
+
+  body {
+    padding: 3rem 5rem;
+  }
+
+  .form {
+    padding: 4rem;
+  }
+
+  .form__tile {
+    font-size: 5rem;
+  }
 }
